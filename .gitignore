@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#OtherFile
+Dota2PatchHelper/Assets/
+Dota2PatchHelper/Image/
+Dota2PatchHelper/ImageSource/
+Dota2PatchHelper/D2PH.ico
+Dota2PatchHelper/FodyWeavers.xml
+Dota2PatchHelper/FodyWeavers.xsd

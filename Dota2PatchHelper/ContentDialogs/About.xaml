@@ -1,0 +1,47 @@
+﻿<ui:ContentDialog x:Class="Dota2PatchHelper.ContentDialogs.About"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:ui="http://schemas.modernwpf.com/2019"
+                  Title="关于"
+                  CloseButtonText="返回"
+                  >
+    <Grid>
+        <TreeView Name="info_TreeView" Height="120" Width="320">
+            <TreeViewItem Header="by TWEril">
+                <TreeViewItem Header="https://github.com/TWEril/D2PH"/>
+                <TreeViewItem Header="右键 选中的链接 可以从浏览器打开"/>
+            </TreeViewItem>
+            <TreeViewItem Header="Ver 0.4">
+                <TreeViewItem Header="Build 2235050821"/>
+            </TreeViewItem>
+            <TreeViewItem Header="Use Library">
+                <TreeViewItem Header="BlurryControls">
+                    <TreeViewItem Header="https://github.com/ConfusedHorse/BlurryControls"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Costura.Fody">
+                    <TreeViewItem Header="https://github.com/Fody/Costura"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Fody">
+                    <TreeViewItem Header="https://github.com/Fody/Fody"/>
+                </TreeViewItem>
+                <TreeViewItem Header="ModernWpfUI">
+                    <TreeViewItem Header="https://github.com/Kinnara/ModernWpf"/>
+                </TreeViewItem>
+                <TreeViewItem Header="MvvmLight">
+                    <TreeViewItem Header="http://www.mvvmlight.net/"/>
+                </TreeViewItem>
+                <TreeViewItem Header="Newtonsoft.Json">
+                    <TreeViewItem Header="https://www.newtonsoft.com/json"/>
+                </TreeViewItem>
+            </TreeViewItem>
+
+            <TreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="复制选中的内容" CommandParameter="copy" Height="40" Click="MenuItem_Click"/>
+                    <MenuItem Header="打开选中的链接" CommandParameter="open" Height="40" Click="MenuItem_Click"/>
+                    <MenuItem Header="取消" Height="40"/>
+                </ContextMenu>
+            </TreeView.ContextMenu>
+        </TreeView>
+    </Grid>
+</ui:ContentDialog>

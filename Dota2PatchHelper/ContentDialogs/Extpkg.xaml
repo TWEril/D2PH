@@ -1,0 +1,17 @@
+﻿<ui:ContentDialog x:Class="Dota2PatchHelper.ContentDialogs.Extpkg"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:ui="http://schemas.modernwpf.com/2019"
+                  Title="操作中..."
+                  IsPrimaryButtonEnabled="False" PrimaryButtonText="确定"
+                  Loaded="Extpkg_Loaded"
+                  >
+    <Grid Name="Main_Grid">
+        <StackPanel>
+            <ui:ProgressBar Name="w_ProgressBar" Minimum="0" Value="0" Maximum="1" IsIndeterminate="True"/>
+            <TextBlock Name="w_TextBlock" Margin="0,10,0,0" MaxWidth="270" Text="..." TextWrapping="Wrap"/>
+            <Separator Margin="0,10,0,0" Visibility="{Binding ElementName=exitpar_CheckBox,Path=Visibility}"/>
+            <CheckBox Margin="0,10,0,0" Name="exitpar_CheckBox" Content="确定后启动 Dota2，并且退出此程序" Checked="exitpar_CheckBox_Checked" Unchecked="exitpar_CheckBox_Unchecked" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</ui:ContentDialog>
