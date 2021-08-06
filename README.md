@@ -3,7 +3,7 @@
 可以快速的将压缩包内容覆盖到DOTA2的目录
 
 # 下载
-你可以在[这里](https://github.com/TWEril/D2PH/releases)下载到最新的发行版
+你可以在[这里](https://github.com/TWEril/D2PH/releases/latest)下载到最新的发行版
 
 # 支持蒸汽平台吗？
 暂不支持<br>
