@@ -4,7 +4,7 @@
 
 # 下载
 你可以在[这里](https://github.com/TWEril/D2PH/releases/latest)找到最新的发行版<br>
-或者点击[这里](https://github.com/TWEril/D2PH/releases/download/v0.4/D2PH.v0.4.zip)直接下载推荐的版本
+或者点击[这里](https://github.com/TWEril/D2PH/releases/download/v0.5/D2PH.v0.5.zip)直接下载推荐的版本
 
 # 支持其他补丁吗？
 只要按照格式来是没问题的<br>
