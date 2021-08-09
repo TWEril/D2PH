@@ -7,8 +7,8 @@
 或者点击[这里](https://github.com/TWEril/D2PH/releases/download/v0.4/D2PH.v0.4.zip)直接下载推荐的版本
 
 # 支持其他补丁吗？
-只要按照格式来是没问题的
-比如需要替换“npc_units.txt”这个文件
+只要按照格式来是没问题的<br>
+比如需要替换“npc_units.txt”这个文件<br>
 则在压缩包内的路径应该为：%补丁名称%\dota 2 beta\game\dota\scripts\npc\npc_units.txt
 
 # 支持蒸汽平台吗？
