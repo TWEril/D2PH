@@ -11,8 +11,8 @@
                 <TreeViewItem Header="https://github.com/TWEril/D2PH"/>
                 <TreeViewItem Header="右键 选中的链接 可以从浏览器打开"/>
             </TreeViewItem>
-            <TreeViewItem Header="Ver 0.4">
-                <TreeViewItem Header="Build 0125070821"/>
+            <TreeViewItem Name="Ver_TreeViewItem" Header="Ver 0.0">
+                <TreeViewItem Name="Build_TreeViewItem" Header="Build 0000000000"/>
             </TreeViewItem>
             <TreeViewItem Header="Use Library">
                 <TreeViewItem Header="BlurryControls">

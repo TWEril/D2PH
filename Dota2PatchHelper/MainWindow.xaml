@@ -42,10 +42,10 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Grid Height="54" Margin="10,10,10,0" ToolTip="{Binding Name}">
+                            <Grid Height="54" Margin="10,10,10,0" >
                                 <Border CornerRadius="6" Opacity="0.4" Background="Gray"/>
                                 <Border CornerRadius="6" Opacity="0.8" Background="{DynamicResource SystemControlBackgroundAltHighBrush}"/>
-                                <TextBlock Margin="10,0,100,0" FontSize="16" Text="{Binding Name}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+                                <TextBlock Margin="10,0,100,0" FontSize="16" ToolTip="{Binding Name}" Text="{Binding Name}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
                                 <Button Content="使用" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="80" Command="{Binding UsePkgCommand}"/>
                             </Grid>
                         </DataTemplate>
@@ -59,6 +59,7 @@
                     <MenuItem Header="Dota2">
                         <MenuItem Header="启动" Height="40" Command="{Binding OpenDotaCommand}"/>
                         <MenuItem Header="打开根目录" Height="40" Command="{Binding OpenDotaPathCommand}"/>
+                        <MenuItem Header="还原文件改变" Height="40" Command="{Binding DotaHelpCommand}"/>
                     </MenuItem>
                     <MenuItem Header="Steam">
                         <MenuItem Header="启动" Height="40" Command="{Binding OpenSteamCommand}"/>

@@ -13,6 +13,9 @@ namespace Dota2PatchHelper
     /// </summary>
     public partial class App : Application
     {
+        public const string Ver = "Ver 0.5";
+        public const string Build = "Build 1605090821";
+
         //启动
         private void App_Startup(object sender, StartupEventArgs e)
         {

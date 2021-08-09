@@ -27,6 +27,7 @@ namespace Dota2PatchHelper.ViewModel
             SHA256wl.Add("80273B4273051DE86BCF652FA901E641C9291C1F8FC1B90908DB2F3D4533D8C5");
             SHA256wl.Add("4DE3AC2EA3D232DBD63E5A00102CE883556E4A17CE3B1F945CCC395DCE389F45");
             SHA256wl.Add("B7551339F532CAA9B2268A72E21F288C938EB5319B0350BEAD2983F27F8E3033");
+            SHA256wl.Add("35247804295D889B28AD19B0C72B1C4002201E449F203B4A7F46A285CB65CA0B");
             #endregion
 
             PackageCollection = new ObservableCollection<datpkg>();
@@ -67,6 +68,7 @@ namespace Dota2PatchHelper.ViewModel
         //Dota
         public ICommand OpenDotaCommand { get; private set; }
         public ICommand OpenDotaPathCommand { get; private set; }
+        public ICommand DotaHelpCommand { get; private set; }
 
         //Steam
         public ICommand OpenSteamCommand { get; private set; }
@@ -137,6 +139,27 @@ namespace Dota2PatchHelper.ViewModel
                 else
                 {
                     mw.ShowContentDialog("找不到Steam", "请确认此计算机是否已 安装/正确安装 Steam");
+                }
+            });
+            DotaHelpCommand = new RelayCommand(async () =>
+            {
+                var text = new StringBuilder();
+                text.AppendLine("① 打开Steam → 右键Dota2");
+                text.AppendLine("② 点击属性 → 再点击本地文件");
+                text.AppendLine("③ 最后点击验证文件完整性");
+                text.AppendLine("等待Steam验证或下载完成即可");
+                var cd = new ModernWpf.Controls.ContentDialog()
+                {
+                    Title = "如何还原文件更改",
+                    Content = text.ToString(),
+                    PrimaryButtonText = "打开Steam",
+                    CloseButtonText = "确定",
+                    DefaultButton = ModernWpf.Controls.ContentDialogButton.Primary
+                };
+                var cdr = await mw.ShowContentDialog(cd);
+                if (cdr == ModernWpf.Controls.ContentDialogResult.Primary)
+                {
+                    OpenSteam();
                 }
             });
 

@@ -153,6 +153,7 @@ namespace Dota2PatchHelper.ContentDialogs
                         {
                             //修正路径
                             var objpath = item.FullName;
+                            var objdir = item.DirectoryName.Replace(ZipRootPath + "dota 2 beta", dota2path);
                             var spath = objpath.Replace(ZipRootPath + "dota 2 beta", dota2path);
 
                             //开始操作
@@ -161,6 +162,11 @@ namespace Dota2PatchHelper.ContentDialogs
                                 //Console.WriteLine(objpath);
                                 //Console.WriteLine(spath);
                                 //Console.WriteLine("---------------------------------------------------------");
+
+                                if (!Directory.Exists(objdir))
+                                {
+                                    Directory.CreateDirectory(objdir);
+                                }
                                 File.Copy(objpath, spath, true);
                             }
                             catch

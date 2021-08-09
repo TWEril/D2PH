@@ -24,6 +24,9 @@ namespace Dota2PatchHelper.ContentDialogs
         public About()
         {
             InitializeComponent();
+
+            Ver_TreeViewItem.Header = App.Ver;
+            Build_TreeViewItem.Header = App.Build;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
